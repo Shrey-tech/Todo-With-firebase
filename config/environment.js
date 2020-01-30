@@ -1,11 +1,17 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'todofinal',
     environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+      apiKey: "AIzaSyDnBZTe6hRMvTqmKvP-GNAbauS08d6dZIw",
+      authDomain: "todo-41ad6.firebaseapp.com",
+      databaseURL: "https://todo-41ad6.firebaseio.com",
+      storageBucket: "todo-41ad6.appspot.com",
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

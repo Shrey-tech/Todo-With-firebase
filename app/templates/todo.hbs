@@ -1,0 +1,20 @@
+<h2>Todo</h2>
+{{input type= "text" id="new-todo" placeholder="Write here" value= newTodo}}
+<button {{action 'createTodo'}} disabled={{enableSubmit}}>Submit</button>
+<ul>
+  {{#each model as |todo|}}
+  <div>
+    <li>
+      {{todo.title}}</li>
+    {{!-- {{#if todo.completed}}
+      - Completed
+      {{/if}}
+    </li>
+    <button {{action 'markComplete' todo}}>Mark Complete</button>
+    <button {{action 'removeTodo' todo}}>RemoveTodo</button> --}}
+  </div>
+  {{else}} None Found
+  {{/each}}
+</ul>
+{{outlet}}
+{{outlet}}
