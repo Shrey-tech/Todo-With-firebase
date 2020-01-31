@@ -15,6 +15,10 @@ export default Controller.extend({
       });
       todo.save();
       this.set("newTodo", "");
+    },
+    removeTodo(todo) {
+      todo.deleteRecord();
+      todo.save();
     }
   }
 });
