@@ -1,14 +1,1 @@
-<h2>Todo{{model.id}} : {{model.title}}</h2>
-<h3>Comments: </h3>
-{{input type="text" placeholder="Write a comment" value=newComment}}
-<button {{action 'createComment' model.id}} disabled={{enableCommentSubmit}}>Comment</button>
-{{#each model.comments as |comment|}}
-<li>
-  {{comment.body}}</li>
-{{!-- <span><button {{action 'removeComment' comment}}>Remove</button></span> --}}
-
-{{/each}}
-{{!-- {{outlet}} --}}
-
-
 {{outlet}}

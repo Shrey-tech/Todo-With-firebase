@@ -8,7 +8,9 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route("todo", function() {
-    this.route("show", { path: "/:todo_id" });
+    this.route("show", { path: "/:todo_id" }, function() {
+      this.route('comments');
+    });
   });
 });
 

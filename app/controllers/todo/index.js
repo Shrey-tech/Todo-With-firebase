@@ -17,8 +17,14 @@ export default Controller.extend({
       this.set("newTodo", "");
     },
     removeTodo(todo) {
-      todo.deleteRecord();
-      todo.save();
+
+      // this.store.findRecord('todo', todo, {
+      //   reload: true
+      // }).then((post) => {
+      //   return post.destroyRecord();
+      // })
+      todo.destroyRecord();
+      // todo.save();
     }
   }
 });
