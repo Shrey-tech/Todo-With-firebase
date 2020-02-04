@@ -6,9 +6,11 @@ const Router = EmberRouter.extend({
   rootURL: config.rootURL
 });
 
-Router.map(function() {
-  this.route("todo", function() {
-    this.route("show", { path: "/:todo_id" }, function() {
+Router.map(function () {
+  this.route("todos", function () {
+    this.route("show", {
+      path: "/:todo_id"
+    }, function () {
       this.route('comments');
     });
   });

@@ -5,7 +5,7 @@
   {{#each model as |todo|}}
   <div>
     <li>
-      {{#link-to "todo.show" todo class=todo.id}}{{todo.title}}{{/link-to}}
+      {{#link-to "todos.show" todo class=todo.id}}{{todo.title}}{{/link-to}}
     </li>
     <div>
       <button {{action 'removeTodo' todo}}>Remove</button>

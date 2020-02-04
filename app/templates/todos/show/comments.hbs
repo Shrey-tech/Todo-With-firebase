@@ -1,11 +1,10 @@
 {{input type="text" placeholder="Write a comment" value=newComment}}
-<button {{action 'createComment' model.id}} disabled={{enableCommentSubmit}}>Comment</button>
+{{!-- {{model}} --}}
+<button {{action 'createComment' model.todo }} disabled={{enableCommentSubmit}}>Comment</button>
 {{#each model.comments as |comment|}}
-{{!-- {{equal comment.todoId model.todo.id}} --}}
 <li>
   {{comment.body}}</li>
 <button {{action 'removeComment' comment}}>Remove</button>
-
+{{else}}None Found
 {{/each}}
-
 {{outlet}}
